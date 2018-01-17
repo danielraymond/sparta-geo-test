@@ -21,6 +21,10 @@ An example with the device name would be:
 
 http://localhost:9292/devices/ct
 
+Or go to the following url for the full list of devices:
+
+http://localhost:9292/devices
+
 To run the tests for this app change directory into the service-object-model and run the following command in your terminal (after hosting the server locally):
 
 ```
@@ -36,9 +40,7 @@ Tests have been written in the service object model directory to check that the 
 
 The tests currently use a static value for the name which can be changed in the notes_by_name_service_spec.rb file to check for a different device. This can be found in the before hook. The notes in one of the later tests would need to be changed for the test to be successful.
 
-The app also allows you to view all of the devices in the xml file by going to the following url when the server is hosted locally:
-
-http://localhost:9292/devices
+The app also allows you to view all of the devices in the xml file by going to the url given above.
 
 Tests for this service can be seen in the all_devices_service_spec.rb file in the service object model. The tests loop through the array and check the length is as expected, the values are the correct type and the values of the first and last devices are what they should be.
 
@@ -51,6 +53,4 @@ I spent about an hour and 20 minutes creating the service object model to call t
 
 I spent about an hour and 20 minutes getting the web page to display the data for all of the devices.
 
-I then spent about 20 minutes setting up the tests for this service however I ran out of time to write a full set of tests.
-
-The remaining time was spent cleaning up the code and writing this readme.
+I spent the remaining time writing the tests for the all devices service in the service object model and writing this readme.
