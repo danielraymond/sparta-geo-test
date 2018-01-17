@@ -1,0 +1,6 @@
+gem "sinatra"
+gem "rack"
+gem "nokogiri"
+gem "rspec"
+gem "json"
+gem "httparty"
