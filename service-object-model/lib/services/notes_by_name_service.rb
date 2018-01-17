@@ -14,8 +14,20 @@ class NotesByNameService
     @notes
   end
 
+  def get_device
+    @notes['device']
+  end
+
   def get_notes
-    @notes['notes']
+    get_device['notes']
+  end
+
+  def get_value
+    get_device['value']
+  end
+
+  def get_name
+    get_device['name']
   end
 
 end
