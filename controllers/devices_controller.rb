@@ -15,17 +15,10 @@ class DevicesController < Sinatra::Base
 
     # creating an instance of the device model and calling the required method
     @get_devices = Device.new
-    @devices = @get_devices.get_all_devices
+    @devices = @get_devices.create_hash_from_all_devices
 
     # putting the data returned in the correct format displaying on the web page
-    json = []
-
-    @devices.each do |device|
-      hash = {:name => device[0], :value => device[1], :notes => device[2]}
-      json.push(hash)
-    end
-
-    json.to_json
+    @devices.to_json
 
   end
 

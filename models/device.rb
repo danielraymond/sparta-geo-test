@@ -93,4 +93,15 @@ class Device
 
   end
 
+  # method to create a hash from the devices array
+  def create_hash_from_all_devices
+    json = []
+    devices = get_all_devices
+    devices.each do |device|
+      hash = {:name => device[0], :value => device[1], :notes => device[2]}
+      json.push(hash)
+    end
+    json
+  end
+
 end
